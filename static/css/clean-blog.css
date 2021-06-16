@@ -238,10 +238,11 @@ nav .container-fluid{
   margin-bottom: 10px;
 }
 .post-preview > .post-meta {
-  color: #808080;
-  font-size: 18px;
-  font-style: italic;
   margin-top: 0;
+  font: 500 0.85em/1.33em 'Fira Sans', sans-serif;
+  opacity: 0.5;
+  margin-top: 0;
+
 }
 .post-preview > .post-meta > a {
   text-decoration: none;
