@@ -49,9 +49,6 @@ blockquote {
   color: #808080;
   font-style: italic;
 }
-blockquote p{
-  margin-top: 0;
-}
 pre {
   background-color: transparent;
   font-size: 16px;
