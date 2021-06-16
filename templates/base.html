@@ -126,10 +126,6 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    {% for title, link in MENUITEMS %}
-                        <li{% if page_name == link %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></li>
-                    {% endfor %}
-
                     {% if DISPLAY_PAGES_ON_MENU %}
                         {# FIXME: Simplify to 'for p in pages' when we are ready to drop support for Pelican < 3.7 #}
                         {% for p in PAGES or pages %}
@@ -142,6 +138,10 @@
                             {% endfor %}
                         {% endif %}
                     {% endif %}
+
+                    {% for title, link in MENUITEMS %}
+                        <li{% if page_name == link %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
