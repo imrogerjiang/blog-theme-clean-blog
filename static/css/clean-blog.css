@@ -44,10 +44,6 @@ a:hover,
 a:focus {
   color: #0057a2;
 }
-a img:hover,
-a img:focus {
-  cursor: zoom-in;
-}
 a.headerlink{
   opacity: 0;
   transition: visibility 0s,opacity .2s ease-in;
