@@ -127,7 +127,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     {% for title, link in MENUITEMS %}
-                        <li><a href="{{ link }}">{{ title }}</a></li>
+                        <li{% if page_name == link %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></li>
                     {% endfor %}
 
                     {% if DISPLAY_PAGES_ON_MENU %}
