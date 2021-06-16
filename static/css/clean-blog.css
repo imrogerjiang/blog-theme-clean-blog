@@ -5,10 +5,11 @@
  */
 
 body {
-  font-family: 'Open Sans', 'Lora','Times New Roman',serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #404040;
+  font: 400 2.1em / 1.5em 'Cardo', serif;
+  color: #555960;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p {
@@ -25,7 +26,7 @@ h4,
 h5,
 h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 700;
 }
 a {
   color: #0085a1;
