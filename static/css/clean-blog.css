@@ -28,6 +28,9 @@ h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
+article{
+  margin-top:80px;
+}
 article h1, h2{
   margin-top: 1.2em;
 }
@@ -73,7 +76,7 @@ table {
   max-width: 100%;
   margin: 2em 0;
   background-color: transparent;
-  border: 1px solid #e5e4e1
+  border: 1px solid #e5e4e1;
 }
 table th,
 table td {
@@ -81,7 +84,7 @@ table td {
   padding: 0.5em;
   line-height: 0.95em;
   text-align: left;
-  border: 1px solid #e5e4e1
+  border: 1px solid #e5e4e1;
 }
 table th {
   font-family: 'Fira Sans', sans-serif;
@@ -105,6 +108,9 @@ table td:after {
 pre {
   background-color: transparent;
   font-size: 16px;
+}
+hr{
+  border-top: 1px solid #e5e4e1;
 }
 hr.small {
   max-width: 100px;
@@ -278,6 +284,11 @@ nav .container-fluid{
     font-size: 30px;
   }
 }
+div.post-preview{
+  padding-top:3.5em;
+  margin-bottom:4.5em;
+  border-top: 1px solid #e5e4e1;
+}
 .post-preview > a {
   color: #404040;
 }
@@ -296,11 +307,11 @@ nav .container-fluid{
   font-weight: 300;
   margin-bottom: 10px;
 }
-.post-preview > .post-meta {
-  margin-top: 0;
+.post-preview > p.post-meta {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
   font: 500 0.85em/1.33em 'Fira Sans', sans-serif;
   opacity: 0.5;
-  margin-top: 0;
 
 }
 .post-preview > .post-meta > a {
@@ -468,7 +479,9 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
-.article-summary {
-  padding-top:10px;
-  padding-bottom: 10px;
+p.article-summary {
+  margin-top:0;
+  margin-bottom:0;
+  padding-top:0;
+  padding-bottom:0;
 }
