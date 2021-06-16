@@ -282,7 +282,8 @@ footer .list-inline {
   padding: 0;
 }
 footer .copyright {
-  font-size: 14px;
+  font: 500 0.7em/1.33em 'Fira Sans', sans-serif;
+  opacity: 0.5;
   text-align: center;
   margin-bottom: 0;
 }
