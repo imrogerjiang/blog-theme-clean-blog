@@ -207,6 +207,7 @@ nav .container-fluid{
 .intro-header .post-heading .meta {
   font: 500 0.85em/1.33em 'Fira Sans', sans-serif;
   color: #fff;
+  opacity: 0.85;
 }
 .intro-header .post-heading .meta a {
   color: white;
