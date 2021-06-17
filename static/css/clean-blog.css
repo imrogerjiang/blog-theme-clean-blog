@@ -532,11 +532,12 @@ span.superscript{
   font-size:1.33rem;
   vertical-align:super
 }
-ul.list-articles-under-tag-category time{
+div.blog-archives time,
+ul.list-articles-under-tag-category time
+{
   float: right;
   font: 500 0.85em/1.33em 'Fira Sans', sans-serif;
   opacity: 0.5;
-  /* text-align: left */
 }
 ul.list-articles-under-tag-category{
   list-style: none outside none;
@@ -545,4 +546,28 @@ h3.tag-title{
   border-bottom: 1px solid #e5e4e1;
   margin-bottom: 3px;
   padding-bottom: 7px;
+}
+
+/* Archives */
+div.blog-archives {
+  margin-top: 3em;
+}
+div.blog-archives h1 {
+  float: left;
+  clear: both;
+  position: relative;
+  margin: 0 1em 0 0;
+}
+div.blog-archives h1 a{
+  color:#555960;
+}
+div.blog-archives h1 a:hover,
+div.blog-archives h1 a:focus{
+  color: #0057a2;
+  text-decoration: none;
+}
+div.blog-archives div.last-entry-of-year{
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #e5e4e1;
 }

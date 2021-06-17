@@ -24,11 +24,43 @@
 {% endblock header %}
 
 {% block content %}
-    <dl>
-        {% for article in dates %}
-            <dt>{{ article.locale_date }}</dt>
-            <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
-        {% endfor %}
-        <hr>
-    </dl>
+        <div class="blog-archives">
+            {% for article in dates %}
+                {% set year = article.date.strftime('%Y') %}
+                {% if loop.first %}
+                    <h1 id="{{ year }}"><a href="#{{ year }}">{{ year }}</a></h1>
+                {% else %}
+                    {% set prevyear = loop.previtem.date.strftime('%Y') %}
+                    {% if prevyear != year %}
+                        <h1 id="{{ year }}"><a href="#{{ year }}">{{ year }}</a></h1>
+                    {% endif %}
+                {% endif %}
+
+                {% if loop.last %}
+                    <div itemscope>
+                {% else %}
+                    
+                    {% set next_year = loop.nextitem.date.strftime('%Y') %}
+
+                    {% if next_year != year %}
+                        <div itemscope class="last-entry-of-year">
+                    {% else %}
+                        <div itemscope>
+                    {% endif %}
+                {% endif %}
+
+                <a href="{{ SITEURL }}/{{ article.url }}">
+                    {{ article.title }}
+                    {% if article.subtitle %}
+                    <small class="subtitle">
+                        {{ article.subtitle }}
+                    </small>
+                    {% endif %}
+                </a>
+                <time itemprop="dateCreated" datetime="{{ article.date.strftime('%d %b %Y') }}">
+                    {{ article.date.strftime('%d %b %Y') }}
+                </time>
+                </div>
+            {% endfor %}
+        </div>
 {% endblock content %}
