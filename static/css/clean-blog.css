@@ -46,6 +46,7 @@ a {
 a:hover,
 a:focus {
   color: #0057a2;
+  outline: 0; 
 }
 a.headerlink{
   opacity: 0;
