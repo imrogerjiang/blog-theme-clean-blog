@@ -67,7 +67,7 @@
                 {% if article.has_summary %}
                     {{ article.summary }}
                 {% elif article.summary %}
-                    {{ article.summary|striptags|truncate(140) }}
+                    {{ article.summary|striptags|truncate(400) }}
                 {% endif %}
                 </p>
             {% endif %}            
