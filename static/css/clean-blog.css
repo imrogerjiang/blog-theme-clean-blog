@@ -289,13 +289,13 @@ nav .container-fluid{
   }
 }
 div.project{
-  padding-top:3.5em;
-  margin-bottom:4.5em;
+  padding-top:2em;
+  margin-bottom:3.5em;
   border-top: 1px solid #e5e4e1;
 }
 div.post-preview{
-  padding-top:3.5em;
-  margin-bottom:4.5em;
+  padding-top:2em;
+  margin-bottom:3.5em;
   border-top: 1px solid #e5e4e1;
 }
 .post-preview > a {
@@ -500,14 +500,20 @@ p.article-summary {
   padding-top:0;
   padding-bottom:0;
 }
+/* Portfolio */
+p.portfolio-blurb{
+  margin-top: 3.5em;
+  margin-bottom: 3em;
+}
+
 /* Tags */
 h2.list-of-tags{
-  margin-top: 2em;
+  margin-top: 2.5em;
 }
 ul.list-projects,
 ul.list-of-tags {
   list-style: none;
-  margin: 0 0 3em 0;
+  margin: 0 0 4em 0;
   overflow: hidden;
   padding: 0;
 }
@@ -544,13 +550,14 @@ ul.list-articles-under-tag-category{
 }
 h3.tag-title{
   border-bottom: 1px solid #e5e4e1;
+  margin-top: 2em;
   margin-bottom: 3px;
   padding-bottom: 7px;
 }
 
 /* Archives */
 div.blog-archives {
-  margin-top: 3em;
+  margin-top: 3.5em;
 }
 div.blog-archives h1 {
   float: left;
@@ -567,7 +574,7 @@ div.blog-archives h1 a:focus{
   text-decoration: none;
 }
 div.blog-archives div.last-entry-of-year{
-  padding-bottom: 1em;
-  margin-bottom: 1em;
+  padding-bottom: 2em;
+  margin-bottom: 2.5em;
   border-bottom: 1px solid #e5e4e1;
 }
