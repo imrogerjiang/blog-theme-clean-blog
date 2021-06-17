@@ -24,8 +24,42 @@
 {% endblock header %}
 
 {% block content %}
-    <h1>Tags for {{ SITENAME }}</h1>
+    <h2 class="list-of-tags">Tags</h2>
+    <ul class="list-of-tags">
+        {% for tag, articles in tags|sort %}
+        <li>
+        {% set num = articles|count %}
+        <a href="#{{ tag.slug }}-ref">{{ tag }}<span class="superscript">{{ num }}</span></a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% for tag, articles in tags|sort %}
+        <h3 id="{{ tag.slug }}-ref" class="tag-title">{{ tag }}</h3>
+        <ul class="list-articles-under-tag-category">
+            {% for article in articles|sort(reverse = true, attribute = 'date') %}
+            <li itemscope>
+                <a href="{{ SITEURL }}/{{ article.url }}">
+                    {{ article.title }}
+                    {% if article.subtitle %}
+                    <small class="subtitle">
+                        {{ article.subtitle }}
+                    </small>
+                    {% endif %}
+                </a>
+                <time itemprop="dateCreated" datetime="{{ article.date.strftime('%d %b %Y')  }}">
+                    {{ article.date.strftime('%d %b %Y')  }}
+                </time>
+            </li>
+            {% endfor %}
+        </ul>
+
+        {% endfor %}
+    
+
+    
+    {# <h1>Tags for {{ SITENAME }}</h1>
     {%- for tag, articles in tags|sort %}
         <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
-    {% endfor %}
+    {% endfor %} #}
 {% endblock content %}
