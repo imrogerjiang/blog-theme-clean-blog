@@ -89,10 +89,13 @@ table td {
 table th {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 500;
-  font-size: 0.75em;
+  font-size: 0.8em;
   line-height: 1.25em;
   padding: 0.666em;
   color: #000
+}
+table td{
+  font-size:0.9em;
 }
 table td:after {
   position: absolute;
@@ -461,7 +464,7 @@ form .row:first-child .floating-label-form-group {
 .project img{
   width: 100%; 
   height: auto;
-  margin-top: 33px;
+  margin-top: 1.2em;
   border: 1px solid #e5e4e1;
 }
 ::-moz-selection {
