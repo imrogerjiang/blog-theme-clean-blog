@@ -284,6 +284,11 @@ nav .container-fluid{
     font-size: 30px;
   }
 }
+div.project{
+  padding-top:3.5em;
+  margin-bottom:4.5em;
+  border-top: 1px solid #e5e4e1;
+}
 div.post-preview{
   padding-top:3.5em;
   margin-bottom:4.5em;
@@ -307,12 +312,12 @@ div.post-preview{
   font-weight: 300;
   margin-bottom: 10px;
 }
-.post-preview > p.post-meta {
+.post-preview > p.post-meta,
+.project p.post-meta{
   margin-top: 1.2em;
   margin-bottom: 1.2em;
   font: 500 0.85em/1.33em 'Fira Sans', sans-serif;
   opacity: 0.5;
-
 }
 .post-preview > .post-meta > a {
   text-decoration: none;
@@ -452,6 +457,12 @@ form .row:first-child .floating-label-form-group {
   color: #808080;
   background-color: #404040;
   cursor: not-allowed;
+}
+.project img{
+  width: 100%; 
+  height: auto;
+  margin-top: 33px;
+  border: 1px solid #e5e4e1;
 }
 ::-moz-selection {
   color: white;

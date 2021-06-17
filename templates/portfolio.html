@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+        <header class="intro-header" style="background-image: url('{{ SITEURL }}/images/covers/portfolio.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Portfolio</h1>
+                        {% if SITESUBTITLE %}
+                            <hr class="small">
+                            <span class="subheading">{{ SITESUBTITLE }}</span>
+                        {% endif %}
+                        {% if SOCIAL and SHOW_SOCIAL_ON_INDEX_PAGE_HEADER %}
+                            <ul class="list-inline text-center">
+                            {% for name,link in SOCIAL %}
+                                <li>
+                                    <a href="{{ link }}">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-{{ name|lower }} fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock header %}
+
+{% block content %}
+    <div class="container"><div class="row"><div class="col-lg-10 col-lg-offset-1">
+        <div class="row intro-content"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <br>
+            <p>I enjoy working on a range of projects - from neural nets to frontend. Here is a selection of my projects:</p> 
+            <br>
+        </div></div>
+
+        <div class="row project">
+            <div class="col-lg-9">
+                <a href="https://www.rogerjiang.com" title="rogerjiang.com">
+                    <h2 class="post-title">
+                        {# Project title #}
+                        Blog
+                    </h2>
+                </a>
+                <p class="post-meta">
+                    {# Month/Year #}
+                    Jun 2021
+                </p>
+                <p class="article-summary">
+                    {# Description #}
+                    I share my thoughts about learning professional skills (ML, neural nets, interpersonal) and life skills (listening, conscientiousness, readings) here. Published with <a href="https://docs.getpelican.com/en/latest/" rel="external">Pelican</a> with a <a href="https://github.com/imrogerjiang/pelican-theme-clean-blog" rel="external">theme</a> I designed and coded.
+                </p>
+            </div>
+            <div class="col-lg-3 offset-lg-3">
+                <a href= "https://www.rogerjiang.com" title="rogerjiang.com">
+                    <img src="{{ SITEURL }}/images/projects/blog.png" alt="rogerjiangs blog">
+                </a>
+            </div>
+        </div>
+    </div></div></div>
+
+    {% include "pagination.html" %}
+{% endblock content %}
